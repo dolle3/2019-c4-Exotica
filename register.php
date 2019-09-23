@@ -1,9 +1,9 @@
 <?php include('server.php') ?>
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
     <title>Registration system PHP and MySQL</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <div class="header">
@@ -13,20 +13,25 @@
 <form method="post" action="register.php">
     <?php include('errors.php'); ?>
     <div class="input-group">
-        <label>Username</label>
+        <label>Username
         <input type="text" name="username" value="<?php echo $username; ?>">
+        </label>
     </div>
     <div class="input-group">
-        <label>Email</label>
+        <label>Email
         <input type="email" name="email" value="<?php echo $email; ?>">
+        </label>
     </div>
     <div class="input-group">
-        <label>Password</label>
+        <label>Password
         <input type="password" name="password_1">
+        </label>
     </div>
     <div class="input-group">
-        <label>Confirm password</label>
+        <label>Confirm password
         <input type="password" name="password_2">
+        </label>
+
     </div>
     <div class="input-group">
         <button type="submit" class="btn" name="reg_user">Register</button>
