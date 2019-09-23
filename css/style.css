@@ -52,7 +52,7 @@ form, .content {
 }
 .error {
     width: 92%;
-    margin: 0px auto;
+    margin: 0 auto;
     padding: 10px;
     border: 1px solid #a94442;
     color: #a94442;
