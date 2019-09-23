@@ -14,22 +14,22 @@
     <?php include('errors.php'); ?>
     <div class="input-group">
         <label>Username
-        <input type="text" name="username" value="<?php echo $username; ?>">
+            <input type="text" name="username" value="<?php echo $username; ?>">
         </label>
     </div>
     <div class="input-group">
         <label>Email
-        <input type="email" name="email" value="<?php echo $email; ?>">
+            <input type="email" name="email" value="<?php echo $email; ?>">
         </label>
     </div>
     <div class="input-group">
         <label>Password
-        <input type="password" name="password_1">
+            <input type="password" name="password_1">
         </label>
     </div>
     <div class="input-group">
         <label>Confirm password
-        <input type="password" name="password_2">
+            <input type="password" name="password_2">
         </label>
 
     </div>
