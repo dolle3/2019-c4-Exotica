@@ -13,8 +13,18 @@
 <form method="post" action="register.php">
     <?php include('errors.php'); ?>
     <div class="input-group">
-        <label>Username
+        <label>Voornaam
             <input type="text" name="firstname" value="<?php echo $username; ?>">
+        </label>
+    </div>
+    <div class="input-group">
+        <label>Tussenvoegsel
+            <input type="text" name="infix" value="<?php echo $infix; ?>">
+        </label>
+    </div>
+    <div class="input-group">
+        <label>Achternaam
+            <input type="text" name="lastname" value="<?php echo $lastname; ?>">
         </label>
     </div>
     <div class="input-group">
@@ -22,15 +32,29 @@
             <input type="email" name="email" value="<?php echo $email; ?>">
         </label>
     </div>
+    
     <div class="input-group">
-        <label>phone
+        <label>Telefoonnummer
             <input type="tel" name="tel" value="<?php echo $phone; ?>">
         </label>
     </div>
     <div class="input-group">
-        <label>
-            <input type="text">
+        <label>address
+            <input type="text" name="address" value="<?php echo $address; ?>">
         </label>
+    </div>
+    <div class="input-group">
+        <label>zipcode
+            <input type="text" name="postcode" value="<?php echo $zipcode; ?>">
+        </label>
+    </div>
+    <div class="input-group">
+        <label>city
+            <input type="text" name="city" value="<?php echo $city; ?>">
+        </label>
+    </div>
+    
+    
     </div>
     <div class="input-group">
         <label>Password

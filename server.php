@@ -4,10 +4,18 @@ session_start();
 // initializing variables
 $username = "";
 $email = "";
+$phone = "";
+$address = "";
+$zipcode = "";
+$city = "";
+$infix = "";
+$lastname = "";
+
+
 $errors = array();
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', ' ', 'exotica');
+$db = mysqli_connect('localhost', 'root', '', 'exotica');
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -20,8 +28,6 @@ if (isset($_POST['reg_user'])) {
     $address = mysqli_real_escape_string($db, $_POST['address']);
     $zipcode = mysqli_real_escape_string($db, $_POST['postcode']);
     $city = mysqli_real_escape_string($db, $_POST['city']);
-    $role = mysqli_real_escape_string($db, $_POST['role']);
-    $specialty = mysqli_real_escape_string($db, $_POST['specialty']);
     $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
     $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
@@ -59,7 +65,7 @@ if (isset($_POST['reg_user'])) {
     $user = mysqli_fetch_assoc($result);
 
     if ($user) { // if user exists
-        if ($user['username'] === $username) {
+        if ($user['firstname'] === $username) {
             array_push($errors, "gebruikersnaam is al in gebruik");
         }
 
@@ -72,8 +78,7 @@ if (isset($_POST['reg_user'])) {
     if (count($errors) == 0) {
         $password = md5($password_1);//encrypt the password before saving in the database
 
-        $query = "INSERT INTO users (firstname, email, password, city, address, infix, phone, postcode, lastname, role, specialty)
-  			  VALUES('$username', '$email', '$password', '$infix', '$lastname', '$phone', '$address', '$role', '$city', '$zipcode', '$specialty')";
+        $query = "INSERT INTO `users` (`iduser`, `firstname`, `infix`, `lastname`, `email`, `phone`, `address`, `postcode`, `city`, `password`, `role`, `specialty`) VALUES (NULL, '$username', '$infix', '$lastname', '$email', '$phone', '$address', '$zipcode', '$city', '$password', 'klant', '-')";
         mysqli_query($db, $query);
         $_SESSION['firsname'] = $username;
         $_SESSION['success'] = "You are now logged in";

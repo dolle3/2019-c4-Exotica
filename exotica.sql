@@ -125,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `city` varchar(255) NOT NULL,
   `password` varchar(60) NOT NULL,
   `role` enum('klant','admin','medewerker') NOT NULL,
-  `specialty` enum('frog','salamander','turtle/tortoise') NOT NULL,
+  `specialty` enum('frog','salamander','turtle/tortoise','-') NOT NULL,
   PRIMARY KEY (`iduser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
