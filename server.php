@@ -15,7 +15,7 @@ $lastname = "";
 $errors = array();
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'exotica');
+$db = mysqli_connect('localhost', 'root', ' ', 'exotica');
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
