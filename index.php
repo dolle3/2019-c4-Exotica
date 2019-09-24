@@ -7,8 +7,12 @@ if (!isset($_SESSION['firstname'])) {
 }
 if (isset($_GET['logout'])) {
     session_destroy();
-    unset($_SESSION['firstname']);
+    unset($_SESSION['role']);
     header("location: login.php");
+}
+if (isset($_GET['role'])){
+    $_SESSION['msg'] = "your role";
+    header('location: login.php');
 }
 ?>
 <!DOCTYPE html>

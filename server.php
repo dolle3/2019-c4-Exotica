@@ -10,6 +10,7 @@ $zipcode = "";
 $city = "";
 $infix = "";
 $lastname = "";
+$role = "";
 
 
 $errors = array();
@@ -28,6 +29,7 @@ if (isset($_POST['reg_user'])) {
     $address = mysqli_real_escape_string($db, $_POST['address']);
     $zipcode = mysqli_real_escape_string($db, $_POST['postcode']);
     $city = mysqli_real_escape_string($db, $_POST['city']);
+    $role = mysqli_real_escape_string($db, $_POST['role']);
     $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
     $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
@@ -78,7 +80,7 @@ if (isset($_POST['reg_user'])) {
     if (count($errors) == 0) {
         $password = md5($password_1);//encrypt the password before saving in the database
 
-        $query = "INSERT INTO `users` (`iduser`, `firstname`, `infix`, `lastname`, `email`, `phone`, `address`, `postcode`, `city`, `password`, `role`, `specialty`) VALUES (NULL, '$username', '$infix', '$lastname', '$email', '$phone', '$address', '$zipcode', '$city', '$password', 'klant', '-')";
+        $query = "INSERT INTO `users` (`iduser`, `firstname`, `infix`, `lastname`, `email`, `phone`, `address`, `postcode`, `city`, `password`, `role`, `specialty`) VALUES (NULL, '$username', '$infix', '$lastname', '$email', '$phone', '$address', '$zipcode', '$city', '$password', '$role', '-')";
         mysqli_query($db, $query);
         $_SESSION['firsname'] = $username;
         $_SESSION['success'] = "You are now logged in";
