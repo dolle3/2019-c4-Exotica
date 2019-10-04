@@ -155,6 +155,25 @@
 </div>
 
 </div>
+</section>
+
+<img src="img/image.png" class="bottom-img">
+
+<!-------Dit is het eind van de banner section------>
+<section id="shop">
+  <div class="container text-center">
+    <h1 class="title">DIEREN</h1>
+  <div class="row text-center" >
+
+  </div>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+</section>
 
 
 
