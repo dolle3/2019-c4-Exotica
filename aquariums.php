@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="nl">
   <head>
@@ -18,7 +17,7 @@
     <!-- Winkelmaand icontje-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <title>Exotica - Uw reptiel en amphibieën speciaalzaak</title>
+    <title>Exotica</title>
   </head>
   <body>
 <section id="nav-bar" >
@@ -31,7 +30,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="index.php">HOME<span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="index.php">HOME <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="dieren.php">DIEREN</a>
@@ -57,6 +56,7 @@
                   </ul>
                 </div>
               </nav>
+
               <div id="modal-wrapper1" class="modal">
   
    
@@ -69,10 +69,10 @@
 
 
   <div class="container">
-  <form class="modal-content animate" method="post" action="logged.php" name="loginform">
+  <form class="modal-content animate" method="post" action="index.php" name="loginform">
 
-    <input type="text" id="login_input_username" placeholder="Gebruikersnaam" class="username" name="user" required/>
-    <input type="password" id="login_input_password" class="login_input" placeholder="Wachtwoord" name="password" autocomplete="off" required />        
+    <input type="text" id="login_input_username" placeholder="Gebruikersnaam" class="login_input" name="user_name" required/>
+    <input type="password" id="login_input_password" class="login_input" placeholder="Wachtwoord" name="user_password" autocomplete="off" required />        
     <button type="submit" class="button2"class= "btn btn-primary">Login</button>     
     <a href="register.php" >Geen account? <b>Maak gratis een account aan</b></a>
   </div>
@@ -107,6 +107,7 @@
 
 <section id="shop">
 <div class="container text-center">
+<h1 class="title">AUQUARIUMS</h1>
 <div class="row text-center" >
 
 </div>
@@ -117,67 +118,104 @@
 </div>
 
 </div>
-
 </section>
 
-<!--Dit is het begin van de banner section----->
-<section id="banner">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <p class="promo-title">Uw reptiel en amphibieën speciaalzaak</p>
-                <p>Exotica is al ruim 20 jaar de specialist in reptielen. Met meer dan 250m² aan winkelvloeroppervlakte is Exotica een van de grootste reptielenwinkels van Nederland.</p>
-
-              
+<img src="img/myimage.png" class="bottom-img">
 
 
-            </div>
-            <div class="col-md-6 text-center">
-                <img src="img/schildpad.jpg" width="500px" class="img-fluid">
-            </div>
-
-        </div>
-
-    </div>
-      <img src="img/myimage.png" class="bottom-img">
-
-</section>
-<!-------Dit is het eind van de banner section------>
 <section id="diensten">
   <div class="container text-center">
-    <h1 class="title">CATEGORIEËN</h1>
   <div class="row text-center" >
-  <div class="col-sm-12 col-md-4 p-4 services">
+  <div class="col-sm-12 col-md-3 p-3 services">
   <div class="card" style="width: auto;">
-  <img src="img/dieren.jpg" class="card-img-top" alt="...">
+  <img src="img/apparatuur/app.jpg" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Dieren</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="dieren.php" id="footer1" class="btn btn-primary">Alles bekijken</a>
+    <h5 class="card-title">Natural Iguana food 12,5 kg</h5>
+    <h3>€ 100,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
   </div>
 </div>
   </div>
-  <div class="col-sm-12 col-md-4 p-4 services">
+  <div class="col-sm-12 col-md-3 p-3 services">
   <div class="card" style="width: auto;">
-  <img src="img/voeding.jpg" class="card-img-top" alt="...">
+  <img src="img/apparatuur/app.jpg" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Voeding</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="voeding.php" id="footer1" class="btn btn-primary">Alles bekijken</a>
+    <h5 class="card-title">Gouden gekko (Gecko Auratus)</h5>
+    <h3>€ 20,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
   </div>
 </div>
       
       </div>
-  <div class="col-sm-12 col-md-4 p-4 services">
+  <div class="col-sm-12 col-md-3 p-3 services">
   <div class="card" style="width: auto;">
-  <img src="img/apparatuur.jpg" class="card-img-top" alt="...">
+  <img src="img/apparatuur/app.jpg" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Apparatuur</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="aquariums.php" id="footer1" class="btn btn-primary">Alles bekijken</a>
+    <h5 class="card-title">Stekelnekagaam (Acanthosaura capra)</h5>
+    <h3>€ 30,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
   </div>
 </div>
       </div>
+  
+      <div class="col-sm-12 col-md-3 p-3 services">
+  <div class="card" style="width: auto;">
+  <img src="img/apparatuur/app.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Steppevaraan (Varanus Exanthematicus)</h5>
+    <h3>€ 60,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
+  </div>
+</div>
+      
+      </div>
+      <div class="col-sm-12 col-md-3 p-3 services">
+  <div class="card" style="width: auto;">
+  <img src="img/apparatuur/app.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
+    <h3>€ 150,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
+  </div>
+</div>
+      
+      </div>
+      <div class="col-sm-12 col-md-3 p-3 services">
+  <div class="card" style="width: auto;">
+  <img src="img/apparatuur/app.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
+    <h3>€ 150,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
+  </div>
+</div>
+      
+      </div>
+
+      <div class="col-sm-12 col-md-3 p-3 services">
+  <div class="card" style="width: auto;">
+  <img src="img/apparatuur/app.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
+    <h3>€ 150,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
+  </div>
+</div>
+      
+      </div>
+
+      <div class="col-sm-12 col-md-3 p-3 services">
+  <div class="card" style="width: auto;">
+  <img src="img/apparatuur/app.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
+    <h3>€ 150,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
+  </div>
+</div>
+      
+      </div>
+  
   </div>
 
 
@@ -187,30 +225,7 @@
 
 </div>
 </section>
-
 <img src="img/image.png" class="bottom-img">
-
-<!-------Dit is het eind van de banner section------>
-
-<div class="container text-center">
-<h1 class="title">CONTACT</h1>
-<div class="row text-center" >
-<div class="container">
-<p>Laat een bericht achter en wij zullen zo spoedig mogelijk contact met je opnemen!</p><b>Vul alsjeblieft je gegevens in</b>
-
-  <form action="contact-form.php" method="post">
-
-    <input type="text" placeholder="Naam" class="name" name="name" required/>
-    <input type="text" placeholder="E-mailadres" class="email" name="mail" required/>
-    <input type="text" placeholder="Onderwerp" class="subject" name="subject" required/>
-    <input type="text" placeholder="Telefoonnummer" class="phone" name="phone" required/>
-    <textarea type="text" placeholder="Bericht" class="bericht" name="message" required></textarea>
-    
-    <div class="test0">      
-    <button type="submit" name="submit" class="button2"class= "btn btn-primary">Versturen</button>
-    </div>
-
-  </div> 
 
 
     <!-- Optional JavaScript -->
@@ -220,4 +235,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
-

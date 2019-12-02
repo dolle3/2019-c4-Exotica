@@ -51,67 +51,67 @@
                             
                       </li>
                       <li class="nav-item">
-                      <a href="checkout.php"> <i class="fa fa-shopping-bag fa-2x fa-flip-horizontal" style="color:#ff914d"></i> <span id="cart-item" class="badge badge-danger"><b>1</b></span></a>
+                   <a href="checkout.php"> <i class="fa fa-shopping-bag fa-2x fa-flip-horizontal" style="color:#ff914d"></i> <span id="cart-item" class="badge badge-danger"><b>1</b></span></a>
                     </li>
                   </ul>
                 </div>
               </nav>
 
-              <div id="modal-wrapper1" class="modal">
+<div id="modal-wrapper1" class="modal">
   
    
           
-  <div class="imgcontainer">
-    <span onclick="document.getElementById('modal-wrapper1').style.display='none'" class="close" title="Close PopUp">&times;</span>
-    <img src="./img/avatar.png" alt="Avatar" class="avatar">
-    <h1 class="title" style="text-align:center">Afspraak portal</h1>
-  </div>
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('modal-wrapper1').style.display='none'" class="close" title="Close PopUp">&times;</span>
+        <img src="./img/avatar.png" alt="Avatar" class="avatar">
+        <h1 class="title" style="text-align:center">Afspraak portal</h1>
+      </div>
 
-
-  <div class="container">
-  <form class="modal-content animate" method="post" action="index.php" name="loginform">
-
-    <input type="text" id="login_input_username" placeholder="Gebruikersnaam" class="login_input" name="user_name" required/>
-    <input type="password" id="login_input_password" class="login_input" placeholder="Wachtwoord" name="user_password" autocomplete="off" required />        
-    <button type="submit" class="button2"class= "btn btn-primary">Login</button>     
-    <a href="register.php" >Geen account? <b>Maak gratis een account aan</b></a>
-  </div>
   
-</form>
+      <div class="container">
+      <form class="modal-content animate" method="post" action="index.php" name="loginform">
 
-</div>
-
-<div id="modal-wrapper2" class="modal">
-
-
+        <input type="text" id="login_input_username" placeholder="Gebruikersnaam" class="login_input" name="user_name" required/>
+        <input type="password" id="login_input_password" class="login_input" placeholder="Wachtwoord" name="user_password" autocomplete="off" required />        
+        <button type="submit" class="button2"class= "btn btn-primary">Login</button>     
+        <a href="register.php" >Geen account? <b>Maak gratis een account aan</b></a>
+      </div>
       
-  <div class="imgcontainer">
-    <span onclick="document.getElementById('modal-wrapper2').style.display='none'" class="close" title="Close PopUp">&times;</span>
-    <img src="./img/avatar.png" alt="Avatar" class="avatar">
-    <h1 class="title" style="text-align:center">Login Portal</h1>
+    </form>
+    
   </div>
 
-
-  <div class="container">
-  <form class="modal-content animate" method="post" action="index.php" name="loginform">
-
-    <input type="text" id="login_input_username" placeholder="Gebruikersnaam" class="login_input" name="user_name" required/>
-    <input type="password" id="login_input_password" class="login_input" placeholder="Wachtwoord" name="user_password" autocomplete="off" required />        
-    <button type="submit" class="button2"class= "btn btn-primary">Login</button>     
-    <a href="register.php" >Geen account? <b>Maak gratis een account aan</b></a>
-  </div>
+  <div id="modal-wrapper2" class="modal">
   
-</form>
+   
+          
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('modal-wrapper2').style.display='none'" class="close" title="Close PopUp">&times;</span>
+        <img src="./img/avatar.png" alt="Avatar" class="avatar">
+        <h1 class="title" style="text-align:center">Login Portal</h1>
+      </div>
 
-</div>
+  
+      <div class="container">
+      <form class="modal-content animate" method="post" action="index.php" name="loginform">
 
-<section id="shop">
-<div class="container text-center">
-<h1 class="title">VOEDING</h1>
-<div class="row text-center" >
+        <input type="text" id="login_input_username" placeholder="Gebruikersnaam" class="login_input" name="user_name" required/>
+        <input type="password" id="login_input_password" class="login_input" placeholder="Wachtwoord" name="user_password" autocomplete="off" required />        
+        <button type="submit" class="button2"class= "btn btn-primary">Login</button>     
+        <a href="register.php" >Geen account? <b>Maak gratis een account aan</b></a>
+      </div>
+      
+    </form>
+    
+  </div>
 
-</div>
-</div>
+  <section id="shop">
+  <div class="container text-center">
+    <h1 class="title">REPTIELEN</h1>
+  <div class="row text-center" >
+
+  </div>
+  </div>
 </div>
 
 
@@ -122,23 +122,22 @@
 
 <img src="img/myimage.png" class="bottom-img">
 
-
 <section id="diensten">
   <div class="container text-center">
   <div class="row text-center" >
   <div class="col-sm-12 col-md-3 p-3 services">
   <div class="card" style="width: auto;">
-  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
+  <img src="img/dieren/Panterkameleon.png" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Natural Iguana food 13,5kg</h5>
-    <h3>€ 100,-</h3>
+    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
+    <h3>€ 150,-</h3>
     <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
   </div>
 </div>
   </div>
   <div class="col-sm-12 col-md-3 p-3 services">
   <div class="card" style="width: auto;">
-  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
+  <img src="img/dieren/rep2.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Gouden gekko (Gecko Auratus)</h5>
     <h3>€ 20,-</h3>
@@ -149,7 +148,7 @@
       </div>
   <div class="col-sm-12 col-md-3 p-3 services">
   <div class="card" style="width: auto;">
-  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
+  <img src="img/dieren/rep3.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Stekelnekagaam (Acanthosaura capra)</h5>
     <h3>€ 30,-</h3>
@@ -160,7 +159,7 @@
   
       <div class="col-sm-12 col-md-3 p-3 services">
   <div class="card" style="width: auto;">
-  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
+  <img src="img/dieren/rep4.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Steppevaraan (Varanus Exanthematicus)</h5>
     <h3>€ 60,-</h3>
@@ -171,7 +170,7 @@
       </div>
       <div class="col-sm-12 col-md-3 p-3 services">
   <div class="card" style="width: auto;">
-  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
+  <img src="img/dieren/Panterkameleon.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
     <h3>€ 150,-</h3>
@@ -182,19 +181,7 @@
       </div>
       <div class="col-sm-12 col-md-3 p-3 services">
   <div class="card" style="width: auto;">
-  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
-    <h3>€ 150,-</h3>
-    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
-  </div>
-</div>
-      
-      </div>
-
-      <div class="col-sm-12 col-md-3 p-3 services">
-  <div class="card" style="width: auto;">
-  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
+  <img src="img/dieren/Panterkameleon.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
     <h3>€ 150,-</h3>
@@ -206,7 +193,19 @@
 
       <div class="col-sm-12 col-md-3 p-3 services">
   <div class="card" style="width: auto;">
-  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
+  <img src="img/dieren/Panterkameleon.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
+    <h3>€ 150,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
+  </div>
+</div>
+      
+      </div>
+
+      <div class="col-sm-12 col-md-3 p-3 services">
+  <div class="card" style="width: auto;">
+  <img src="img/dieren/Panterkameleon.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
     <h3>€ 150,-</h3>
@@ -225,8 +224,103 @@
 
 </div>
 </section>
-
 <img src="img/image.png" class="bottom-img">
+<section id="shop">
+  <div class="container text-center">
+    <h1 class="title">AMFIBIEËN</h1>
+  <div class="row text-center" >
+  <div class="col-sm-12 col-md-3 p-3 services">
+  <div class="card" style="width: auto;">
+  <img src="img/dieren/amf1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
+    <h3>€ 150,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
+  </div>
+</div>
+
+
+  </div>
+  <div class="col-sm-12 col-md-3 p-3 services">
+  <div class="card" style="width: auto;">
+  <img src="img/dieren/amf1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
+    <h3>€ 150,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
+  </div>
+</div>
+
+  </div>
+  <div class="col-sm-12 col-md-3 p-3 services">
+  <div class="card" style="width: auto;">
+  <img src="img/dieren/amf1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
+    <h3>€ 150,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
+  </div>
+</div>
+</div>
+<div class="col-sm-12 col-md-3 p-3 services">
+  <div class="card" style="width: auto;">
+  <img src="img/dieren/amf1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
+    <h3>€ 150,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
+  </div>
+</div>
+
+
+
+</div>
+<div class="col-sm-12 col-md-3 p-3 services">
+  <div class="card" style="width: auto;">
+  <img src="img/dieren/amf1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
+    <h3>€ 150,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
+  </div>
+</div>
+
+</div>
+<div class="col-sm-12 col-md-3 p-3 services">
+  <div class="card" style="width: auto;">
+  <img src="img/dieren/amf1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
+    <h3>€ 150,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
+  </div>
+</div>
+</div>
+<div class="col-sm-12 col-md-3 p-3 services">
+  <div class="card" style="width: auto;">
+  <img src="img/dieren/amf1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
+    <h3>€ 150,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
+  </div>
+</div>
+</div>
+<div class="col-sm-12 col-md-3 p-3 services">
+  <div class="card" style="width: auto;">
+  <img src="img/dieren/amf1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
+    <h3>€ 150,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
+  </div>
+</div>
+</div>
+
+
+</section>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
