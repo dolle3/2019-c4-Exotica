@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1718bc05-cfea-4f0e-8b2b-8277cdda1cac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/aquariums.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/aquariums.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/dieren.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/dieren.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/voeding.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/voeding.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +58,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\wamp64\www\2019-c4-Exotica\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="16743b5d-1313-4837-be18-02476b102fa1" name="localhost" port="3306" />
@@ -64,11 +72,14 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3" />
   <component name="ProjectId" id="1RECtRDoyGyweFxYAlQDRGR1MPV" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../phpmyreservation" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,6 +90,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\2019-c4-Exotica\css" />
+      <recent name="D:\wamp64\www\2019-c4-Exotica\core" />
+      <recent name="D:\wamp64\www\2019-c4-Exotica\includes" />
       <recent name="D:\wamp64\www\2019-c4-Exotica" />
     </key>
   </component>
@@ -112,12 +126,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@28808619" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2cef3c4" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@28808619" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1192d2c8" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2cef3c4" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@36882960" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -137,6 +151,8 @@
       <updated>1569231194761</updated>
       <workItem from="1569231195903" duration="886000" />
       <workItem from="1569234528742" duration="2835000" />
+      <workItem from="1570522730210" duration="31000" />
+      <workItem from="1575359006984" duration="6165000" />
     </task>
     <task id="LOCAL-00001" summary="0.0.17">
       <created>1569235762153</created>

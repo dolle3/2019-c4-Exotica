@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="nl">
   <head>
@@ -6,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Mijn Eigein css-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,197 +20,10 @@
     <title>Exotica - Uw reptiel en amphibieën speciaalzaak</title>
   </head>
   <body>
-<section id="nav-bar" >
-        <nav class="navbar navbar-expand-lg navbar-light">
-              <a class="navbar-brand" href="index.php"><img src="./img/exo-logo.png"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                      <a class="nav-link" href="index.php">HOME<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="dieren.php">DIEREN</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="voeding.php">VOEDING</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="aquariums.php">AQUARIUMS</a>
-                    </li>
-                      
-                      <li class="nav-item">
-                            <button type="button" onclick="document.getElementById('modal-wrapper1').style.display='block'"  id="footer1">AFSPRAAK MAKEN</button>
-                            
-                      </li>
-                      <li class="nav-item">
-                            <button type="button" onclick="document.getElementById('modal-wrapper2').style.display='block'"  id="footer1">LOGIN</button>
-                            
-                      </li>
-                      <li class="nav-item">
-                      <a href="checkout.php"> <i class="fa fa-shopping-bag fa-2x fa-flip-horizontal" style="color:#ff914d"></i> <span id="cart-item" class="badge badge-danger"><b>1</b></span></a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-              <div id="modal-wrapper1" class="modal">
-  
-   
-          
-  <div class="imgcontainer">
-    <span onclick="document.getElementById('modal-wrapper1').style.display='none'" class="close" title="Close PopUp">&times;</span>
-    <img src="./img/avatar.png" alt="Avatar" class="avatar">
-    <h1 class="title" style="text-align:center">Afspraak portal</h1>
-  </div>
-
-
-  <div class="container">
-  <form class="modal-content animate" method="post" action="logged.php" name="loginform">
-
-    <input type="text" id="login_input_username" placeholder="Gebruikersnaam" class="username" name="user" required/>
-    <input type="password" id="login_input_password" class="login_input" placeholder="Wachtwoord" name="password" autocomplete="off" required />        
-    <button type="submit" class="button2"class= "btn btn-primary">Login</button>     
-    <a href="register.php" >Geen account? <b>Maak gratis een account aan</b></a>
-  </div>
-  
-</form>
-
-</div>
-
-<div id="modal-wrapper2" class="modal">
-
-
-      
-  <div class="imgcontainer">
-    <span onclick="document.getElementById('modal-wrapper2').style.display='none'" class="close" title="Close PopUp">&times;</span>
-    <img src="./img/avatar.png" alt="Avatar" class="avatar">
-    <h1 class="title" style="text-align:center">Login Portal</h1>
-  </div>
-
-
-  <div class="container">
-  <form class="modal-content animate" method="post" action="index.php" name="loginform">
-
-    <input type="text" id="login_input_username" placeholder="Gebruikersnaam" class="login_input" name="user_name" required/>
-    <input type="password" id="login_input_password" class="login_input" placeholder="Wachtwoord" name="user_password" autocomplete="off" required />        
-    <button type="submit" class="button2"class= "btn btn-primary">Login</button>     
-    <a href="register.php" >Geen account? <b>Maak gratis een account aan</b></a>
-  </div>
-  
-</form>
-
-</div>
-
-<section id="shop">
-<div class="container text-center">
-<div class="row text-center" >
-
-</div>
-</div>
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-<!--Dit is het begin van de banner section----->
-<section id="banner">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <p class="promo-title">Uw reptiel en amphibieën speciaalzaak</p>
-                <p>Exotica is al ruim 20 jaar de specialist in reptielen. Met meer dan 250m² aan winkelvloeroppervlakte is Exotica een van de grootste reptielenwinkels van Nederland.</p>
-
-              
-
-
-            </div>
-            <div class="col-md-6 text-center">
-                <img src="img/schildpad.jpg" width="500px" class="img-fluid">
-            </div>
-
-        </div>
-
-    </div>
-      <img src="img/myimage.png" class="bottom-img">
-
-</section>
-<!-------Dit is het eind van de banner section------>
-<section id="diensten">
-  <div class="container text-center">
-    <h1 class="title">CATEGORIEËN</h1>
-  <div class="row text-center" >
-  <div class="col-sm-12 col-md-4 p-4 services">
-  <div class="card" style="width: auto;">
-  <img src="img/dieren.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Dieren</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="dieren.php" id="footer1" class="btn btn-primary">Alles bekijken</a>
-  </div>
-</div>
-  </div>
-  <div class="col-sm-12 col-md-4 p-4 services">
-  <div class="card" style="width: auto;">
-  <img src="img/voeding.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Voeding</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="voeding.php" id="footer1" class="btn btn-primary">Alles bekijken</a>
-  </div>
-</div>
-      
-      </div>
-  <div class="col-sm-12 col-md-4 p-4 services">
-  <div class="card" style="width: auto;">
-  <img src="img/apparatuur.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Apparatuur</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="aquariums.php" id="footer1" class="btn btn-primary">Alles bekijken</a>
-  </div>
-</div>
-      </div>
-  </div>
-
-
-    </div>
-  </div>
-</div>
-
-</div>
-</section>
-
-<img src="img/image.png" class="bottom-img">
-
-<!-------Dit is het eind van de banner section------>
-
-<div class="container text-center">
-<h1 class="title">CONTACT</h1>
-<div class="row text-center" >
-<div class="container">
-<p>Laat een bericht achter en wij zullen zo spoedig mogelijk contact met je opnemen!</p><b>Vul alsjeblieft je gegevens in</b>
-
-  <form action="contact-form.php" method="post">
-
-    <input type="text" placeholder="Naam" class="name" name="name" required/>
-    <input type="text" placeholder="E-mailadres" class="email" name="mail" required/>
-    <input type="text" placeholder="Onderwerp" class="subject" name="subject" required/>
-    <input type="text" placeholder="Telefoonnummer" class="phone" name="phone" required/>
-    <textarea type="text" placeholder="Bericht" class="bericht" name="message" required></textarea>
-    
-    <div class="test0">      
-    <button type="submit" name="submit" class="button2"class= "btn btn-primary">Versturen</button>
-    </div>
-
-  </div> 
-
+  <?php require_once './includes/navbar.php';
+  ?>
+  <?php require_once './core/init.php'
+  ?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
