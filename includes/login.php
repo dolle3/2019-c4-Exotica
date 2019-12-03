@@ -1,9 +1,9 @@
-<?php include('server.php') ?>
+<?php include('./core/server.php') ?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <title>Registration system PHP and MySQL</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
 <div class="header">
