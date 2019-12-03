@@ -1,5 +1,10 @@
 <?php require_once './core/init.php';
 ?>
+<section id="shop">
+    <div class="container text-center">
+        <h1 class="title">Dieren</h1>
+    </div>
+</section>
 <img src="../img/myimage.png" class="bottom-img">
 
 <section id="diensten">
