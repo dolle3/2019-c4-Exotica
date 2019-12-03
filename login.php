@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php require_once "connectdb.php" ?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -10,15 +10,15 @@
     <h2>Login</h2>
 </div>
 
-<form method="post" action="login.php">
+<form method="post" action="login-script.php">
     <?php include('errors.php'); ?>
     <div class="input-group">
-        <label>firstname
-            <input type="text" name="firstname">
+        <label>gebruikersnaam
+            <input type="text" name="username">
         </label>
     </div>
     <div class="input-group">
-        <label>Password
+        <label>wachtwoord
             <input type="password" name="password">
         </label>
     </div>
