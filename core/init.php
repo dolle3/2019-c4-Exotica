@@ -9,9 +9,9 @@ spl_autoload_register(function($class) {
 <section class="content">
     <?php 
        if(isset($_GET["content"])){
-           include("./includes/" .$_GET["content"] . ".php");
+           require_once("./includes/" .$_GET["content"] . ".php");
        }else{
-           include("./includes/home.php");
+           require_once("./includes/home.php");
        }
        ?>
 </section>

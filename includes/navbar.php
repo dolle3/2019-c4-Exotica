@@ -1,3 +1,4 @@
+
 <section id="nav-bar" >
         <nav class="navbar navbar-expand-lg navbar-light">
               <a class="navbar-brand" href="../index.php"><img src="../img/exo-logo.png"></a>
@@ -46,10 +47,10 @@
 
 
   <div class="container">
-  <form class="modal-content animate" method="post" action=".././login-script.php" name="loginform">
+  <form class="modal-content animate" method="post" action=".././includes/login-script.php" name="loginform">
 
-    <input type="text" id="login_input_username" placeholder="Gebruikersnaam" class="username" name="user" required/>
-    <input type="password" id="login_input_password" class="login_input" placeholder="Wachtwoord" name="password" autocomplete="off" required />
+    <input type="text" id="login_input_username" placeholder="username" class="username" name="username" required/>
+    <input type="password" id="login_input_password" class="password" placeholder="password" name="password" autocomplete="off" required />
     <button type="submit" class="button2"class= "btn btn-primary">Login</button>
     <a href="blank.php?content=register" >Geen account? <b>Maak gratis een account aan</b></a>
   </div>
@@ -70,7 +71,7 @@
 
 
   <div class="container">
-  <form class="modal-content animate" method="post" action=".././login-script.php" name="loginform">
+  <form class="modal-content animate" method="post" action=".././includes/login-script.php" name="loginform">
 
     <input type="text" id="login_input_username" placeholder="Gebruikersnaam" class="login_input" name="username" required/>
     <input type="password" id="login_input_password" class="login_input" placeholder="Wachtwoord" name="password" autocomplete="off" required />

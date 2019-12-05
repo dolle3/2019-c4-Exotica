@@ -1,12 +1,13 @@
 <?php
-require_once  "./connectdb.php";
-require_once  "./functions.php";
+require_once "../connectdb.php";
+require_once "../functions.php";
+
 
 
 $username = sanitize($_POST['username']);
 $password = sanitize($_POST['password']);
 
-if( !empty($email) && !empty($password)){
+if( !empty($username) && !empty($password)){
 
     
     
@@ -24,7 +25,7 @@ if (mysqli_num_rows($result) == 1 ){
     
     
     
-    if ( password_verify($password, $db_password)){
+    if ($password == $db_password){
         
         
         
@@ -42,10 +43,10 @@ if (mysqli_num_rows($result) == 1 ){
         case 'klant':
         echo '<div class="alert alert-success" role="alert">
         U ben ingelogd als klant, u wordt doorgestuurd naar de home pagina</div>';
-        echo '<meta http-equiv="Refresh" content="1; url=./index.php">';
+        echo '<meta http-equiv="Refresh" content="2; url=.././index.php">';
         break;
         default: 
-        echo '<meta http-equiv="Refresh" content="1; url=./index.php">';
+        echo '<meta http-equiv="Refresh" content="2; url=.././index.php">';
        
     }
 
@@ -53,18 +54,18 @@ if (mysqli_num_rows($result) == 1 ){
 }else{
     echo '<div class="alert alert-danger" role="alert">De door uw opgegeven e-mailadres en wachtwoord combinatie is niet bekend, probeer het opnieuw </div>';
     // header("Refresh: 4; url=./index.php?content=login");
-    echo '<meta http-equiv="Refresh" content="2; url=./index.php?content=login">';
+    echo '<meta http-equiv="Refresh" content="2; url=./index.php?content=login-script">';
 }
 
 }else{
     echo '<div class="alert alert-danger" role="alert">Het door u opgegeven e-mailadres is niet bekend. probeer het opnieuw.</div>';
     // header("Refresh: 4; url=./index.php?content=login");
-    echo '<meta http-equiv="Refresh" content="2; url=./index.php?content=login">';
+    echo '<meta http-equiv="Refresh" content="2; url=./index.php?content=login-script">';
 
 }
 }else{
     echo '<div class="alert alert-danger" role="alert">1 van uw velden is leeg.</div>';
     // header("Refresh: 4; url=./index.php?content=login&email=$email");
-    //echo '<meta http-equiv="Refresh" content="2; url=./index.php?content=login">';
+    echo '<meta http-equiv="Refresh" content="2; url=../index.php?content=login-script">';
 }
 ?>
