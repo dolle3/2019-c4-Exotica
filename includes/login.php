@@ -1,5 +1,5 @@
-<?php require_once "connectdb.php" ?>
-<?php include('./core/server.php') ?>
+<?php require_once "./connectdb.php" ?>
+<?php require_once "./core/server.php" ?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -11,7 +11,7 @@
     <h2>Login</h2>
 </div>
 
-<form method="post" action="login-script.php">
+<form method="post" action=".././login-script.php">
     <?php include('errors.php'); ?>
     <div class="input-group">
         <label>gebruikersnaam
@@ -27,7 +27,7 @@
         <button type="submit" class="btn" name="login_user">Login</button>
     </div>
     <p>
-        Not yet a member? <a href="register.php">Sign up</a>
+        Not yet a member? <a href="blank.php?content=register">Sign up</a>
     </p>
 </form>
 </body>

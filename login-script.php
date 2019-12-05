@@ -1,8 +1,7 @@
 <?php
+require_once  "./connectdb.php";
+require_once  "./functions.php";
 
-
-include("./connectdb.php");
-include("./functions.php");
 
 $username = sanitize($_POST['username']);
 $password = sanitize($_POST['password']);
@@ -30,7 +29,7 @@ if (mysqli_num_rows($result) == 1 ){
         
         
         $_SESSION['userid'] = $record['userid'];
-        $_SESSION['userrol'] = $record['role'];
+        $_SESSION['role'] = $record['role'];
         
        
         
@@ -43,10 +42,10 @@ if (mysqli_num_rows($result) == 1 ){
         case 'klant':
         echo '<div class="alert alert-success" role="alert">
         U ben ingelogd als klant, u wordt doorgestuurd naar de home pagina</div>';
-        echo '<meta http-equiv="Refresh" content="1; url=./index.php?content=home">';
+        echo '<meta http-equiv="Refresh" content="1; url=./index.php">';
         break;
         default: 
-        echo '<meta http-equiv="Refresh" content="1; url=./index.php?content=home">';
+        echo '<meta http-equiv="Refresh" content="1; url=./index.php">';
        
     }
 

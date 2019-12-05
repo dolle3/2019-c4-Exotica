@@ -1,6 +1,9 @@
 <?php
-require_once "connectdb.php";
-require_once "functions.php";
+require_once "./connectdb.php";
+require_once "./functions.php";
+require_once './core/init.php';
+
+
 //session_start();
 
 $firstname = sanitize($_POST["firstname"]);
