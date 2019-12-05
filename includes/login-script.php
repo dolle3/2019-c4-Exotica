@@ -1,6 +1,6 @@
 <?php
-require_once "../connectdb.php";
-require_once "../functions.php";
+require_once ".././core/db/connectdb.php";
+require_once ".././core/db/functions.php";
 
 
 
