@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1718bc05-cfea-4f0e-8b2b-8277cdda1cac" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/core/javascript/agenda.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/agenda.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/agenda.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/login-script-2.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/login-script.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/login-script.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/navbar.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +81,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../phpmyreservation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/includes" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -87,6 +91,9 @@
     <property name="settings.editor.selected.configurable" value="database.data.csv.formats" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\2019-c4-Exotica\includes" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\wamp64\www\2019-c4-Exotica\core\db" />
       <recent name="D:\wamp64\www\2019-c4-Exotica\includes" />
@@ -152,6 +159,7 @@
       <workItem from="1569234528742" duration="2835000" />
       <workItem from="1570522730210" duration="31000" />
       <workItem from="1575359006984" duration="6165000" />
+      <workItem from="1575964345758" duration="2026000" />
     </task>
     <task id="LOCAL-00001" summary="0.0.17">
       <created>1569235762153</created>

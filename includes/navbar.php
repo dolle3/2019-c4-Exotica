@@ -47,7 +47,7 @@
 
 
   <div class="container">
-  <form class="modal-content animate" method="post" action=".././includes/login-script.php" name="loginform">
+  <form class="modal-content animate" method="post" action=".././includes/login-script-2.php" name="loginform" id="afspraak">
 
     <input type="text" id="login_input_username" placeholder="username" class="username" name="username" required/>
     <input type="password" id="login_input_password" class="password" placeholder="password" name="password" autocomplete="off" required />
