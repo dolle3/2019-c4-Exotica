@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1718bc05-cfea-4f0e-8b2b-8277cdda1cac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connectdb.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/db/connectdb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exotica.sql" beforeDir="false" afterPath="$PROJECT_DIR$/core/db/exotica.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/db/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/login-script.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/login-script.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/registration.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

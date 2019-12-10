@@ -54,13 +54,13 @@ if (mysqli_num_rows($result) == 1 ){
 }else{
     echo '<div class="alert alert-danger" role="alert">De door uw opgegeven e-mailadres en wachtwoord combinatie is niet bekend, probeer het opnieuw </div>';
     // header("Refresh: 4; url=./index.php?content=login");
-    echo '<meta http-equiv="Refresh" content="2; url=./index.php?content=login-script">';
+    echo '<meta http-equiv="Refresh" content="2; url=../index.php?content=login-script">';
 }
 
 }else{
     echo '<div class="alert alert-danger" role="alert">Het door u opgegeven e-mailadres is niet bekend. probeer het opnieuw.</div>';
     // header("Refresh: 4; url=./index.php?content=login");
-    echo '<meta http-equiv="Refresh" content="2; url=./index.php?content=login-script">';
+    echo '<meta http-equiv="Refresh" content="2; url=../index.php?content=login-script">';
 
 }
 }else{
