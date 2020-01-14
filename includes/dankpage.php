@@ -8,9 +8,9 @@
           
   <div class="imgcontainer">
     <a href="../index.php"><span class="close" title="Close PopUp">&times;</span></a>
-    <img src="../img/checked.png" alt="Avatar" class="avatar">
+    <img src="img/checked.png" alt="Avatar" class="avatar">
     <br>
     <h1>Bedankt, wij nemen zo spoedig contact met je op.</h1>
-    <img src="../img/giphy.gif" width="700px">
+    <img src="img/giphy.gif" width="700px">
     
   </div>

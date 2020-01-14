@@ -7,7 +7,7 @@
     </div>
 </section>
 
-<img src="../img/myimage.png" class="bottom-img">
+<img src="img/myimage.png" class="bottom-img">
 
 
 <section id="diensten">
@@ -15,7 +15,7 @@
   <div class="row text-center" >
   <div class="col-sm-12 col-md-3 p-3 services">
   <div class="card" style="width: auto;">
-  <img src="../img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
+  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Natural Iguana food 13,5kg</h5>
     <h3>€ 100,-</h3>
@@ -25,7 +25,7 @@
   </div>
   <div class="col-sm-12 col-md-3 p-3 services">
   <div class="card" style="width: auto;">
-  <img src="../img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
+  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Gouden gekko (Gecko Auratus)</h5>
     <h3>€ 20,-</h3>
@@ -36,7 +36,7 @@
       </div>
   <div class="col-sm-12 col-md-3 p-3 services">
   <div class="card" style="width: auto;">
-  <img src="../img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
+  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Stekelnekagaam (Acanthosaura capra)</h5>
     <h3>€ 30,-</h3>
@@ -47,7 +47,7 @@
   
       <div class="col-sm-12 col-md-3 p-3 services">
   <div class="card" style="width: auto;">
-  <img src="../img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
+  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Steppevaraan (Varanus Exanthematicus)</h5>
     <h3>€ 60,-</h3>
@@ -58,7 +58,7 @@
       </div>
       <div class="col-sm-12 col-md-3 p-3 services">
   <div class="card" style="width: auto;">
-  <img src="../img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
+  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
     <h3>€ 150,-</h3>
@@ -69,19 +69,7 @@
       </div>
       <div class="col-sm-12 col-md-3 p-3 services">
   <div class="card" style="width: auto;">
-  <img src="../img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
-    <h3>€ 150,-</h3>
-    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
-  </div>
-</div>
-      
-      </div>
-
-      <div class="col-sm-12 col-md-3 p-3 services">
-  <div class="card" style="width: auto;">
-  <img src="../img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
+  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
     <h3>€ 150,-</h3>
@@ -93,7 +81,19 @@
 
       <div class="col-sm-12 col-md-3 p-3 services">
   <div class="card" style="width: auto;">
-  <img src="../img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
+  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
+    <h3>€ 150,-</h3>
+    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
+  </div>
+</div>
+      
+      </div>
+
+      <div class="col-sm-12 col-md-3 p-3 services">
+  <div class="card" style="width: auto;">
+  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
     <h3>€ 150,-</h3>
@@ -109,4 +109,4 @@
     </div>
 </section>
 
-<img src="../img/image.png" class="bottom-img">
+<img src="img/image.png" class="bottom-img">

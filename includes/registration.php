@@ -1,7 +1,7 @@
 <?php
-require_once ".././core/db/connectdb.php";
-require_once ".././core/db/functions.php";
-require_once '.././core/init.php';
+require_once "./core/db/connectdb.php";
+require_once "./core/db/functions.php";
+require_once './core/init.php';
 
 
 //session_start();

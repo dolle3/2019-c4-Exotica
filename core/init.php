@@ -11,7 +11,7 @@ spl_autoload_register(function($class) {
        if(isset($_GET["content"])){
            require_once("./includes/" .$_GET["content"] . ".php");
        }else{
-           require_once("./includes/home.php");
+           require_once('./includes/home.php');
        }
        ?>
 </section>

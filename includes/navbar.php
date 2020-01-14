@@ -1,7 +1,7 @@
 
 <section id="nav-bar" >
         <nav class="navbar navbar-expand-lg navbar-light">
-              <a class="navbar-brand" href="../index.php"><img src="../img/exo-logo.png"></a>
+              <a class="navbar-brand" href="index.php"><img src="img/exo-logo.png"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars" aria-hidden="true"></i>
 
@@ -9,7 +9,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="../index.php">HOME<span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="index.php">HOME<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="index.php?content=dieren">DIEREN</a>
@@ -41,13 +41,13 @@
 
   <div class="imgcontainer">
     <span onclick="document.getElementById('modal-wrapper1').style.display='none'" class="close" title="Close PopUp">&times;</span>
-    <img src="../img/avatar.png" alt="Avatar" class="avatar">
+    <img src="img/avatar.png" alt="Avatar" class="avatar">
     <h1 class="title" style="text-align:center">Afspraak portal</h1>
   </div>
 
 
   <div class="container">
-  <form class="modal-content animate" method="post" action=".././includes/login-script-2.php" name="loginform" id="afspraak">
+  <form class="modal-content animate" method="post" action="includes/login-script-2.php" name="loginform" id="afspraak">
 
     <input type="text" id="login_input_username" placeholder="username" class="username" name="username" required/>
     <input type="password" id="login_input_password" class="password" placeholder="password" name="password" autocomplete="off" required />
@@ -65,13 +65,13 @@
 
   <div class="imgcontainer">
     <span onclick="document.getElementById('modal-wrapper2').style.display='none'" class="close" title="Close PopUp">&times;</span>
-    <img src="../img/avatar.png" alt="Avatar" class="avatar">
+    <img src="img/avatar.png" alt="Avatar" class="avatar">
     <h1 class="title" style="text-align:center">Login Portal</h1>
   </div>
 
 
   <div class="container">
-  <form class="modal-content animate" method="post" action=".././includes/login-script.php" name="loginform">
+  <form class="modal-content animate" method="post" action="includes/login-script.php" name="loginform">
 
     <input type="text" id="login_input_username" placeholder="Gebruikersnaam" class="login_input" name="username" required/>
     <input type="password" id="login_input_password" class="login_input" placeholder="Wachtwoord" name="password" autocomplete="off" required />

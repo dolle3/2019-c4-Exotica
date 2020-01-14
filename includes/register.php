@@ -28,14 +28,14 @@
    
           
   <div class="imgcontainer">
-    <a href="../index.php"><span class="close" title="Close PopUp">&times;</span></a>
-    <img src="../img/avatar.png" alt="Avatar" class="avatar">
+    <a href="index.php"><span class="close" title="Close PopUp">&times;</span></a>
+    <img src="img/avatar.png" alt="Avatar" class="avatar">
     <h1 class="title" style="text-align:center">Gebruiker Registratie</h1>
   </div>
 
 
   <div class="container">
-  <form class="modal-content animate" method="post" action="./index.php?content=registration" name="loginform">
+  <form class="modal-content animate" method="post" action="index.php?content=registration" name="loginform">
 
     <input type="text" id="login_input_firsrname" placeholder="Naam" class="login_input" name="firstname" required/>
     <input type="text" id="login_input_infix" placeholder="tussenvoegsel" class="login_input" name="infix"/>

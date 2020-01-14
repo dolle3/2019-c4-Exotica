@@ -20,7 +20,7 @@
     <title>Exotica - Uw reptiel en amphibieën speciaalzaak</title>
 </head>
 <body>
-<?php require_once './core/init.php'
+<?php require_once 'core/init.php'
 ?>
 
 <!-- Optional JavaScript -->
