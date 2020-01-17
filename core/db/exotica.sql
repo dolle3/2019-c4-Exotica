@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Gegenereerd op: 23 sep 2019 om 10:36
+-- Gegenereerd op: 17 jan 2020 om 09:46
 -- Serverversie: 5.7.23
 -- PHP-versie: 7.2.10
 
@@ -30,49 +30,31 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `agenda`;
 CREATE TABLE IF NOT EXISTS `agenda` (
-  `idagenda` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `time` timestamp NOT NULL,
-  `person` enum('wim','truus','kees') NOT NULL,
-  `iduser` int(10) UNSIGNED NOT NULL,
-  PRIMARY KEY (`idagenda`),
-  KEY `iduser to idusers_idx` (`iduser`)
+  `afspraakid` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `userid` int(11) UNSIGNED NOT NULL,
+  `afspraakdatum` timestamp NOT NULL,
+  `afspraaksoort` enum('nazorg','bestelling') NOT NULL,
+  `werknemerid` int(11) NOT NULL,
+  PRIMARY KEY (`afspraakid`),
+  KEY `userid to user_idx` (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `order`
+-- Tabelstructuur voor tabel `factuur`
 --
 
-DROP TABLE IF EXISTS `order`;
-CREATE TABLE IF NOT EXISTS `order` (
-  `idorder` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `iduser` int(10) UNSIGNED NOT NULL,
-  `date` datetime NOT NULL,
-  `price_ex` decimal(5,2) NOT NULL,
-  `price_inc` decimal(5,2) NOT NULL,
-  `status` enum('verzonden','betaald','onderweg','aangekomen') NOT NULL,
-  PRIMARY KEY (`idorder`),
-  KEY `iduser to users_idx` (`iduser`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Tabelstructuur voor tabel `orderline`
---
-
-DROP TABLE IF EXISTS `orderline`;
-CREATE TABLE IF NOT EXISTS `orderline` (
-  `idorderline` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `idorder` int(10) UNSIGNED NOT NULL,
-  `ìdproduct` int(10) UNSIGNED NOT NULL,
-  `amount` int(11) NOT NULL,
-  `price` decimal(4,2) NOT NULL,
-  `total` decimal(5,2) NOT NULL,
-  PRIMARY KEY (`idorderline`),
-  KEY `idorder to order_idx` (`idorder`),
-  KEY `idproduct to product_idx` (`ìdproduct`)
+DROP TABLE IF EXISTS `factuur`;
+CREATE TABLE IF NOT EXISTS `factuur` (
+  `factuurcode` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `userid` int(11) UNSIGNED NOT NULL,
+  `productid` int(11) UNSIGNED NOT NULL,
+  `factuurdatum` timestamp NOT NULL,
+  `aantal` int(11) UNSIGNED NOT NULL,
+  PRIMARY KEY (`factuurcode`),
+  KEY `productid to product_idx` (`productid`),
+  KEY `userid to user_idx` (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -83,51 +65,61 @@ CREATE TABLE IF NOT EXISTS `orderline` (
 
 DROP TABLE IF EXISTS `product`;
 CREATE TABLE IF NOT EXISTS `product` (
-  `idproduct` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `idcategory` int(10) UNSIGNED NOT NULL,
-  `name` varchar(250) NOT NULL,
-  `description` text NOT NULL,
-  `price` decimal(4,2) NOT NULL,
+  `productid` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `productnaam` varchar(100) NOT NULL,
+  `beschrijving` text NOT NULL,
+  `prijs` decimal(5,2) NOT NULL,
+  `productaantal` int(11) UNSIGNED NOT NULL,
   `image` varchar(100) NOT NULL,
-  PRIMARY KEY (`idproduct`)
+  PRIMARY KEY (`productid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `product_category`
+-- Tabelstructuur voor tabel `productcategorie`
 --
 
-DROP TABLE IF EXISTS `product_category`;
-CREATE TABLE IF NOT EXISTS `product_category` (
-  `idcategory` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `parent_id` int(11) NOT NULL,
-  `title` int(11) NOT NULL,
-  PRIMARY KEY (`idcategory`)
+DROP TABLE IF EXISTS `productcategorie`;
+CREATE TABLE IF NOT EXISTS `productcategorie` (
+  `categorieid` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `productid` int(11) UNSIGNED NOT NULL,
+  `categorie` varchar(100) NOT NULL,
+  PRIMARY KEY (`categorieid`),
+  KEY `productid to product_idx` (`productid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `users`
+-- Tabelstructuur voor tabel `user`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `iduser` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `firstname` varchar(150) NOT NULL,
-  `infix` varchar(50) NOT NULL,
-  `lastname` varchar(150) NOT NULL,
-  `email` varchar(500) NOT NULL,
-  `phone` int(15) NOT NULL,
-  `address` varchar(255) NOT NULL,
-  `postcode` varchar(10) NOT NULL,
-  `city` varchar(255) NOT NULL,
-  `password` varchar(60) NOT NULL,
-  `role` enum('klant','admin','medewerker') NOT NULL,
-  `specialty` enum('frog','salamander','turtle/tortoise','-') NOT NULL,
-  PRIMARY KEY (`iduser`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
+  `userid` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(200) NOT NULL,
+  `infix` varchar(100) NOT NULL,
+  `lastname` varchar(200) NOT NULL,
+  `email` varchar(300) NOT NULL,
+  `phone` varchar(15) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `zipcode` varchar(10) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `role` enum('klant','werknemer','admin') DEFAULT 'klant',
+  `employeeId` int(11) UNSIGNED NOT NULL,
+  `username` varchar(100) NOT NULL,
+  PRIMARY KEY (`userid`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `user`
+--
+
+INSERT INTO `user` (`userid`, `firstname`, `infix`, `lastname`, `email`, `phone`, `address`, `zipcode`, `city`, `password`, `role`, `employeeId`, `username`) VALUES
+(4, 'olaf', '', 'majoor', 'olaf@gmail.com', '0622314416', 'komhoeklaan', '3828 AL', 'hoogland', 'olaf', 'klant', 0, 'olaf majoor'),
+(5, 'd', 'd', 'd', 'd@ded.nl', '1234567890', 'vissenhoofd 23', '890kl', 'tiel', 'test1234', 'klant', 0, 'tester');
 
 --
 -- Beperkingen voor geëxporteerde tabellen
@@ -137,20 +129,20 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Beperkingen voor tabel `agenda`
 --
 ALTER TABLE `agenda`
-  ADD CONSTRAINT `iduser to idusers` FOREIGN KEY (`iduser`) REFERENCES `users` (`iduser`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `userid to usertable` FOREIGN KEY (`userid`) REFERENCES `user` (`userid`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Beperkingen voor tabel `order`
+-- Beperkingen voor tabel `factuur`
 --
-ALTER TABLE `order`
-  ADD CONSTRAINT `iduser to users` FOREIGN KEY (`iduser`) REFERENCES `users` (`iduser`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `factuur`
+  ADD CONSTRAINT `productid to producttable` FOREIGN KEY (`productid`) REFERENCES `product` (`productid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `userid to user` FOREIGN KEY (`userid`) REFERENCES `user` (`userid`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Beperkingen voor tabel `orderline`
+-- Beperkingen voor tabel `productcategorie`
 --
-ALTER TABLE `orderline`
-  ADD CONSTRAINT `idorder to order` FOREIGN KEY (`idorder`) REFERENCES `order` (`idorder`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `idproduct to product` FOREIGN KEY (`ìdproduct`) REFERENCES `product` (`idproduct`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `productcategorie`
+  ADD CONSTRAINT `productid to product` FOREIGN KEY (`productid`) REFERENCES `product` (`productid`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
