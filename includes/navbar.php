@@ -30,7 +30,7 @@
 
                       </li>
                       <li class="nav-item">
-                      <a href="checkout.php"> <i class="fa fa-shopping-bag fa-2x fa-flip-horizontal" style="color:#ff914d"></i> <span id="cart-item" class="badge badge-danger"><b>1</b></span></a>
+                      <a href="index.php?content=cart"> <i class="fa fa-shopping-bag fa-2x fa-flip-horizontal" style="color:#ff914d"></i> <span id="cart-item" class="badge badge-danger"><b>1</b></span></a>
                     </li>
                   </ul>
                 </div>

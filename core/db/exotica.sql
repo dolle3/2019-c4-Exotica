@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Gegenereerd op: 17 jan 2020 om 09:46
+-- Gegenereerd op: 18 jan 2020 om 12:41
 -- Serverversie: 5.7.23
 -- PHP-versie: 7.2.10
 
@@ -66,13 +66,24 @@ CREATE TABLE IF NOT EXISTS `factuur` (
 DROP TABLE IF EXISTS `product`;
 CREATE TABLE IF NOT EXISTS `product` (
   `productid` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `productcode` varchar(100) NOT NULL,
   `productnaam` varchar(100) NOT NULL,
   `beschrijving` text NOT NULL,
   `prijs` decimal(5,2) NOT NULL,
   `productaantal` int(11) UNSIGNED NOT NULL,
   `image` varchar(100) NOT NULL,
-  PRIMARY KEY (`productid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `productcategorieid` int(11) UNSIGNED NOT NULL,
+  PRIMARY KEY (`productid`),
+  KEY `productcategorieid to productcategorie_idx` (`productcategorieid`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `product`
+--
+
+INSERT INTO `product` (`productid`, `productcode`, `productnaam`, `beschrijving`, `prijs`, `productaantal`, `image`, `productcategorieid`) VALUES
+(1, 'EXO123', 'Exo Terra Glas Terrarium Zwart - Terraria - 60x45x60 cm', 'Het Exo Terra Glasterrarium is de ideale behuizing voor reptielen en amfibieën ontworpen door Europese herpetologen. De vooraan openende deuren vergemakkelijken het voeren en onderhoud. Een speciaal ontworpen sluiting voorkomt ontsnappen en de deuren kunnen afzonderlijk geopend worden. De volledig uit staalgaas bestaande bovenzijde laat UVB en infrarood door, en kan in zijn geheel worden weggenomen en vergemakkelijkt het inrichten en onderhoud. Aan beide achterzijden van het draadrooster zijn vijf afsluitbare ingangen voor snoeren en buizen voor het gebruik in het terrarium van Heat Wave Rocks, Waterfalls, sensoren, enz.. Door de verheven terrariumbodem kan een substraatverwarmer onderaan worden aangebracht om een deel van het grondoppervlak te verwarmen. De extra hoge voorruit is ideaal voor een dikke bodembedekking (gravende reptielen), een watergedeelte (paludarium) of het aanbrengen van een Exo Terra Reptile Den. De natuurlijke achterwand is in dezelfde kleur als de andere Exo Terra decoratiematerialen (Water Dishes, Waterfalls, Heat Wave Rocks, enz.) en biedt extra klimmogelijkheden.', '179.00', 100, 'img/apparatuur/aquarium1.png', 4),
+(2, 'EXO-5364', 'Paludarium Terrarium - 30 x 30 x 60 cm', 'Dit nieuwe type extra hoog Exo Terra glazen terrarium is ideaal voor boombewonende reptielen- en amfibieënsoorten. De unieke achtergrond met wortelmotief maakt er een geweldig habitat van voor een groot aantal boombewonende soorten zoals boomboa’s en pythons, daggekko’s, bladstaartgekko’s, tokehs, boomkikkers enz. Het heeft alle andere goede kenmerken van de Exo Terra glazen terrariums; Het Exo Terra glasterrarium is de ideale behuizing voor reptielen en amfibieën ontworpen door Europese herpetologen. De vooraan openende deuren vergemakkelijken het voeren en onderhoud. Een speciaal ontworpen sluiting voorkomt ontsnappen en de deuren kunnen afzonderlijk geopend worden. De volledig uit staalgaas bestaande bovenzijde laat UVB en infrarood door, en kan in zijn geheel worden weggenomen en vergemakkelijkt het inrichten en onderhoud. Aan beide achterzijden van het draadrooster zijn vijf afsluitbare ingangen voor snoeren en buizen voor het gebruik in het terrarium van Heat Wave Rocks, Waterfalls, sensoren en dergelijke. Door de verheven terrariumbodem kan een substraatverwarmer onderaan worden aangebracht om een deel van het grondoppervlak te verwarmen. De extra hoge voorruit is ideaal voor een dikke bodembedekking (gravende reptielen), een watergedeelte (paludarium) of het aanbrengen van een Exo Terra Reptile Den. De natuurlijke achterwand is in dezelfde kleur als de andere Exo Terra decoratiematerialen (Water Dishes, Waterfalls, Heat Wave Rocks en meer) en biedt extra klimmogelijkheden. Afmetingen: 30 x 30 x 60 cm Merk Exo Terra Samenvattend Waterdichte bodem.', '99.99', 100, 'img/apparatuur/aquarium2.png', 4);
 
 -- --------------------------------------------------------
 
@@ -83,11 +94,19 @@ CREATE TABLE IF NOT EXISTS `product` (
 DROP TABLE IF EXISTS `productcategorie`;
 CREATE TABLE IF NOT EXISTS `productcategorie` (
   `categorieid` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `productid` int(11) UNSIGNED NOT NULL,
   `categorie` varchar(100) NOT NULL,
-  PRIMARY KEY (`categorieid`),
-  KEY `productid to product_idx` (`productid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`categorieid`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `productcategorie`
+--
+
+INSERT INTO `productcategorie` (`categorieid`, `categorie`) VALUES
+(1, 'reptiel'),
+(2, 'amfibie'),
+(3, 'voedsel'),
+(4, 'aquarium');
 
 -- --------------------------------------------------------
 
@@ -111,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `employeeId` int(11) UNSIGNED NOT NULL,
   `username` varchar(100) NOT NULL,
   PRIMARY KEY (`userid`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `user`
@@ -139,10 +158,10 @@ ALTER TABLE `factuur`
   ADD CONSTRAINT `userid to user` FOREIGN KEY (`userid`) REFERENCES `user` (`userid`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Beperkingen voor tabel `productcategorie`
+-- Beperkingen voor tabel `product`
 --
-ALTER TABLE `productcategorie`
-  ADD CONSTRAINT `productid to product` FOREIGN KEY (`productid`) REFERENCES `product` (`productid`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `product`
+  ADD CONSTRAINT `productcategorieid to productcategorie` FOREIGN KEY (`productcategorieid`) REFERENCES `productcategorie` (`categorieid`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

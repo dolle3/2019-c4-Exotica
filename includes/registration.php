@@ -4,7 +4,7 @@ require_once "./core/db/functions.php";
 require_once './core/init.php';
 
 
-//session_start();
+
 
 $firstname = sanitize($_POST["firstname"]);
 $infix = sanitize($_POST["infix"]);
@@ -23,7 +23,7 @@ $result = mysqli_query($con, $sql);
 
 if (mysqli_num_rows($result) == 1 ){
     echo '<div class="alert alert-danger" role="alert">
-    Deze email bestaat al probeer het opnieuw.</div>';
+    Dit email bestaat al probeer het opnieuw.</div>';
     echo '<meta http-equiv="Refresh" content="2; ./index.php?content=register")'; 
 } else {
 
@@ -61,4 +61,8 @@ $sql = "INSERT INTO `user`      (`userid`,
 $result = mysqli_query($con,$sql);
 
 $id = mysqli_insert_id($con);
+
+echo '<div class="alert alert-succes" role="alert">
+    bedankt voor het registreren, u wordt doorgestuurd naar de inlog pagina.</div>';
+    echo '<meta http-equiv="Refresh" content="2; ./index.php")';
 }
