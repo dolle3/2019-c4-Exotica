@@ -17,6 +17,13 @@
             max-width: 900px;
             margin: 40px auto;
         }
+        #calendar1{
+            max-width: 900px;
+            margin: 40px auto;
+        }
+        h1{
+            text-align: center;
+        }
 
     </style>
     <link href="https://unpkg.com/@fullcalendar/core@4.3.1/main.min.css" rel="stylesheet">
@@ -28,7 +35,10 @@
     <title>Exotica - Uw reptiel en amphibieën speciaalzaak</title>
 </head>
 <body>
+    <h1>afspraak na zorg dier</h1>
 <div id='calendar'></div>
+    <h1>afspraak kopen dier</h1>
+<div id='calendar1'></div>
 </body>
 
 <!-- Optional JavaScript -->
@@ -76,7 +86,7 @@
 </html>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-var calendarEl = document.getElementById('calendar');
+var calendarEl = document.getElementById('calendar1');
 
 var calendar = new FullCalendar.Calendar(calendarEl, {
 plugins: [ 'dayGrid' ],
@@ -93,7 +103,7 @@ var date = new Date(dateStr + 'T00:00:00'); // will be in local time
 
 if (!isNaN(date.valueOf())) { // valid?
 calendar.addEvent({
-title: 'afspraak na zorg dier',
+title: 'afspraak kopen dier',
 start: date,
 allDay: true
 });

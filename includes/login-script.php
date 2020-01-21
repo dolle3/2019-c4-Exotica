@@ -1,6 +1,6 @@
 <?php
-require_once ".././core/db/connectdb.php";
-require_once ".././core/db/functions.php";
+require_once "./core/db/connectdb.php";
+require_once "./core/db/functions.php";
 
 
 
@@ -43,10 +43,10 @@ if (mysqli_num_rows($result) == 1 ){
         case 'klant':
         echo '<div class="alert alert-success" role="alert">
         U ben ingelogd als klant, u wordt doorgestuurd naar de home pagina</div>';
-        echo '<meta http-equiv="Refresh" content="2; url=.././index.php">';
+        echo '<meta http-equiv="Refresh" content="2; url=./index.php">';
         break;
         default: 
-        echo '<meta http-equiv="Refresh" content="2; url=.././index.php">';
+        echo '<meta http-equiv="Refresh" content="2; url=./index.php">';
        
     }
 

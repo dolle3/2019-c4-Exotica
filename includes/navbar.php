@@ -47,7 +47,7 @@
 
 
   <div class="container">
-  <form class="modal-content animate" method="post" action="includes/login-script-2.php" name="loginform" id="afspraak">
+  <form class="modal-content animate" method="post" action="index.php?content=login-script-2" name="loginform" id="afspraak">
 
     <input type="text" id="login_input_username" placeholder="username" class="username" name="username" required/>
     <input type="password" id="login_input_password" class="password" placeholder="password" name="password" autocomplete="off" required />
@@ -71,7 +71,7 @@
 
 
   <div class="container">
-  <form class="modal-content animate" method="post" action="includes/login-script.php" name="loginform">
+  <form class="modal-content animate" method="post" action="index.php?content=login-script" name="loginform">
 
     <input type="text" id="login_input_username" placeholder="Gebruikersnaam" class="login_input" name="username" required/>
     <input type="password" id="login_input_password" class="login_input" placeholder="Wachtwoord" name="password" autocomplete="off" required />
