@@ -77,4 +77,29 @@ $sql2 = "SELECT * FROM product WHERE idproduct = '$product[idproduct]'";
       $sql = "UPDATE product SET stock = '$af' WHERE product.idproduct = '$product[idproduct]'";
       mysqli_query($con,$sql);
 
+}
 
+
+    echo '<div class="alert alert-info" role="alert">
+    Bedankt voor uw aankoop op e-watch.nl, uw product wordt zo spoedig mogelijk op de opgegeven locatie geleverd.</div>';
+    // echo '<meta http-equiv="Refresh" content="1; url=./pdf.php">';
+    
+// price_ex
+// price_inc
+// status
+//var_dump($_SESSION);
+
+//unset($_SESSION['shopping_cart']);
+
+
+
+
+        //echo $sql;
+//var_dump($result);
+
+
+}else{
+    echo '<div class="alert alert-primary" role="alert">login om af te rekenen</div>';
+    echo '<meta http-equiv="Refresh" content="2; url=./index.php?content=login">';
+
+}
