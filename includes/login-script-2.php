@@ -43,10 +43,10 @@ if (mysqli_num_rows($result) == 1 ){
         case 'klant':
         echo '<div class="alert alert-success" role="alert">
         U ben ingelogd als klant, u wordt doorgestuurd naar de agenda pagina</div>';
-        echo '<meta http-equiv="Refresh" content="3; url=./includes/agenda.html">';
+        echo '<meta http-equiv="Refresh" content="2; url=./includes/agenda.php">';
         break;
         default: 
-        echo '<meta http-equiv="Refresh" content="3; url=index.php">';
+        echo '<meta http-equiv="Refresh" content="2; url=index.php">';
        
     }
 

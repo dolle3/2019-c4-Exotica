@@ -21,7 +21,7 @@
                     </li>
 
                       <li class="nav-item">
-                            <button type="button" onclick="window.location.href='./includes/agenda.html'"  id="footer1">AFSPRAAK MAKEN</button>
+                            <button type="button" onclick="window.location.href='index.php?content=agenda'"  id="footer1">AFSPRAAK MAKEN</button>
 
                       </li>
                       <li class="nav-item">
@@ -29,7 +29,7 @@
                             
                       </li>
                       <li class="nav-item">
-                      <a href="index.php?content=cart"> <i class="fa fa-shopping-bag fa-2x fa-flip-horizontal" style="color:#ff914d"></i> <span id="cart-item" class="badge badge-danger"><b>1</b></span></a>
+                      <a href="index.php?content=cart"> <i class="fa fa-shopping-bag fa-2x fa-flip-horizontal" style="color:#ff914d"></i> <span id="cart-item" class="badge badge-danger"><b></b></span></a>
                     </li>
                   </ul>
                 </div>

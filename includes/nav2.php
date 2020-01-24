@@ -20,16 +20,13 @@
                       <a class="nav-link" href="index.php?content=aquariums">AQUARIUMS</a>
                     </li>
 
-                      <li class="nav-item">
-                            <button type="button" onclick="document.getElementById('modal-wrapper1').style.display='block'"  id="footer1">AFSPRAAK MAKEN</button>
 
-                      </li>
                       <li class="nav-item">
                             <button type="button" onclick="document.getElementById('modal-wrapper2').style.display='block'"  id="footer1">LOGIN</button>
 
                       </li>
                       <li class="nav-item">
-                      <a href="index.php?content=cart"> <i class="fa fa-shopping-bag fa-2x fa-flip-horizontal" style="color:#ff914d"></i> <span id="cart-item" class="badge badge-danger"><b>1</b></span></a>
+                      <a href="index.php?content=cart"> <i class="fa fa-shopping-bag fa-2x fa-flip-horizontal" style="color:#ff914d"></i> <span id="cart-item" class="badge badge-danger"><b>   </b></span></a>
                     </li>
                   </ul>
                 </div>
