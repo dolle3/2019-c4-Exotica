@@ -31,7 +31,7 @@ if (mysqli_num_rows($result) == 1 ){
         
         $_SESSION['username'] = $record['username'];
         $_SESSION['role'] = $record['role'];
-        
+        $_SESSION['userId'] = $record['userid'];
        
         
 
