@@ -78,21 +78,28 @@ echo "<a href='./index.php?content=cart'><img src='./img/cart.jpg' /> Cart<span>
 }
 
 
-
 $result = mysqli_query($con,"SELECT * FROM `product` WHERE `productcategorieid` = 4");
+echo '<div class="container text-center"> <div class="row text-center">';
 while($row = mysqli_fetch_assoc($result)){
-    echo "<div class='product_wrapper col-4'>
-    <form method='post' action=''>
-    <input type='hidden' name='productcode' value=".$row['productcode']." />
-    <div class='image'><img src='".$row['image']."' height='140p'/></div>
+
+    echo "
+  <div class=\"col-sm-12 col-md-3 p-3 services\">
+  <div class=\"card\" style=\"width: auto;\">
+  <form method='post' action=''>
+  <input type='hidden' name='productcode' value=".$row['productcode']." />
+  <div class='image'><img src='".$row['image']."' height='140p'></div>
+  <div class=\"card-body\">
     <div class='name'>".$row['productnaam']."</div>
-    <div class='description'>".$row['beschrijving']."</div>
     <div class='price'>€".$row['prijs']."</div>
     <button type='submit' class='buy'>Toevoegen aan winkelwagen</button>
+    </div>
     </form>
-    </div>";
-        }
+  </div>
+</div>
 
+";
+        }
+        echo '</div> </div>';
 
  
  echo "<div style='clear:both;'></div>";

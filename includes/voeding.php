@@ -11,102 +11,101 @@
 
 
 <section id="diensten">
-  <div class="container text-center">
-  <div class="row text-center" >
-  <div class="col-sm-12 col-md-3 p-3 services">
-  <div class="card" style="width: auto;">
-  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Natural Iguana food 13,5kg</h5>
-    <h3>€ 100,-</h3>
-    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
-  </div>
-</div>
-  </div>
-  <div class="col-sm-12 col-md-3 p-3 services">
-  <div class="card" style="width: auto;">
-  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Gouden gekko (Gecko Auratus)</h5>
-    <h3>€ 20,-</h3>
-    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
-  </div>
-</div>
-      
-      </div>
-  <div class="col-sm-12 col-md-3 p-3 services">
-  <div class="card" style="width: auto;">
-  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Stekelnekagaam (Acanthosaura capra)</h5>
-    <h3>€ 30,-</h3>
-    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
-  </div>
-</div>
-      </div>
-  
-      <div class="col-sm-12 col-md-3 p-3 services">
-  <div class="card" style="width: auto;">
-  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Steppevaraan (Varanus Exanthematicus)</h5>
-    <h3>€ 60,-</h3>
-    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
-  </div>
-</div>
-      
-      </div>
-      <div class="col-sm-12 col-md-3 p-3 services">
-  <div class="card" style="width: auto;">
-  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
-    <h3>€ 150,-</h3>
-    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
-  </div>
-</div>
-      
-      </div>
-      <div class="col-sm-12 col-md-3 p-3 services">
-  <div class="card" style="width: auto;">
-  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
-    <h3>€ 150,-</h3>
-    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
-  </div>
-</div>
-      
-      </div>
-
-      <div class="col-sm-12 col-md-3 p-3 services">
-  <div class="card" style="width: auto;">
-  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
-    <h3>€ 150,-</h3>
-    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
-  </div>
-</div>
-      
-      </div>
-
-      <div class="col-sm-12 col-md-3 p-3 services">
-  <div class="card" style="width: auto;">
-  <img src="img/voeding/Reptielenvoeding.jpeg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Panterkameleon (Furcifer Pardalis)</h5>
-    <h3>€ 150,-</h3>
-    <a href="#" id="footer1" class="btn btn-primary">IN WINKELWAGEN</a>
-  </div>
-</div>
-      
-      </div>
-  
-  </div>
 
 
+    <?php
+    require_once "./core/db/connectdb.php";
+    $status="";
+    if (isset($_POST['productcode']) && $_POST['productcode']!=""){
+        $productcode = $_POST['productcode'];
+        $result = mysqli_query(
+            $con,
+            "SELECT * FROM `product` WHERE `productcode`= '$productcode' AND `productcategorieid` = 3"
+        );
+        $row = mysqli_fetch_assoc($result);
+        $productid = $row['productid'];
+        $name = $row['productnaam'];
+        $productcode = $row['productcode'];
+        $price = $row['prijs'];
+        $image = $row['image'];
+        $stock = $row['productaantal'];
+
+        $cartArray = array(
+            $productcode=>array(
+                'productid'=>$productid,
+                'productnaam'=>$name,
+                'productcode'=>$productcode,
+                'prijs'=>$price,
+                'quantity'=> 1,
+                'image'=>$image,
+                'productaantal'=>$stock
+            )
+
+
+        );
+
+        if(empty($_SESSION["shopping_cart"])) {
+            $_SESSION["shopping_cart"] = $cartArray;
+            $status = "<div class='box'>Product is toegevoegd aan de winkelwagen</div>";
+        }else{
+            $array_keys = array_keys($_SESSION["shopping_cart"]);
+            if(in_array($productcode,$array_keys)) {
+                $status = "<div class='box' style='color:white;'>
+	Product is al toegevoegd aan de winkelwagen</div>";
+            } else {
+                $_SESSION["shopping_cart"] = array_merge(
+                    $_SESSION["shopping_cart"],
+                    $cartArray
+                );
+                $status = "<div class='box'>Product is toegevoegd aan de winkelwagen</div>";
+            }
+
+        }
+    }
+
+
+
+
+
+
+    if(!empty($_SESSION["shopping_cart"])) {
+        $cart_count = count(array_keys($_SESSION["shopping_cart"]));
+
+        echo "<div class='cart_div type='hidden>";
+        echo "<a href='./index.php?content=cart'><img src='./img/cart.jpg' /> Cart<span>";
+        echo $cart_count; echo"</span></a>
+</div>";
+
+    }
+
+
+    $result = mysqli_query($con,"SELECT * FROM `product` WHERE `productcategorieid` = 3");
+    echo '<div class="container text-center"> <div class="row text-center">';
+    while($row = mysqli_fetch_assoc($result)){
+
+        echo "
+  <div class=\"col-sm-12 col-md-3 p-3 services\">
+  <div class=\"card\" style=\"width: auto;\">
+  <form method='post' action=''>
+  <input type='hidden' name='productcode' value=".$row['productcode']." />
+  <div class='image'><img src='".$row['image']."' height='140p'></div>
+  <div class=\"card-body\">
+    <div class='name'>".$row['productnaam']."</div>
+    <div class='price'>€".$row['prijs']."</div>
+    <button type='submit' class='buy'>Toevoegen aan winkelwagen</button>
     </div>
-</section>
+    </form>
+  </div>
+</div>
 
+";
+    }
+    echo '</div> </div>';
+
+
+    echo "<div style='clear:both;'></div>";
+
+    echo "<div class='message_box' style='margin:10px 0px;'>";
+    echo $status; ?>
+</section>
 <img src="img/image.png" class="bottom-img">
