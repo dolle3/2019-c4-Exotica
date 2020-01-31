@@ -79,6 +79,12 @@ foreach ($_SESSION["shopping_cart"] as $product){
 <option value="3">3</option>
 <option value="4">4</option>
 <option value="5">5</option>
+    <option value="1">6</option>
+    <option value="2">7</option>
+    <option value="3">8</option>
+    <option value="4">9</option>
+    <option value="5">10</option>
+
 </select>
 </form>
 </td>

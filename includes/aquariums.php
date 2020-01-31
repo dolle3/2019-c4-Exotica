@@ -83,7 +83,7 @@ echo '<div class="container text-center"> <div class="row text-center">';
 while($row = mysqli_fetch_assoc($result)){
 
     echo "
-  <div class=\"col-sm-12 col-md-3 p-3 services\">
+  <div class=\"col-sm-12 col-md-3 p-3 services\" id='div'>
   <div class=\"card\" style=\"width: auto;\">
   <form method='post' action=''>
   <input type='hidden' name='productcode' value=".$row['productcode']." />
@@ -96,7 +96,6 @@ while($row = mysqli_fetch_assoc($result)){
     </form>
   </div>
 </div>
-
 ";
         }
         echo '</div> </div>';

@@ -35,10 +35,9 @@
     <title>Exotica - Uw reptiel en amphibieën speciaalzaak</title>
 </head>
 <body>
-    <h1>afspraak na zorg dier</h1>
+    <h1>Kalendar</h1>
 <div id='calendar'></div>
-    <h1>afspraak kopen dier</h1>
-<div id='calendar1'></div>
+
 </body>
 
 <!-- Optional JavaScript -->
@@ -55,11 +54,11 @@
             plugins: [ 'dayGrid' ],
             defaultView: 'dayGridMonth',
             header: {
-                center: 'addEventButton'
+                center: 'addEventButton, addEventButton1'
             },
             customButtons: {
                 addEventButton: {
-                    text: 'add event...',
+                    text: 'na zorg dier',
                     click: function() {
                         var dateStr = prompt('Enter a date in YYYY-MM-DD format');
                         var date = new Date(dateStr + 'T00:00:00'); // will be in local time
@@ -75,7 +74,26 @@
                             alert('Invalid date.');
                         }
                     }
+                },
+                addEventButton1: {
+                    text: 'afspraak kopen dier',
+                    click: function() {
+                        var dataStr = prompt('enter a date in yyyy-mm-dd format');
+                        var date = new Date(dataStr + 'T00:00:00');
+
+                        if (!isNaN(date.valueOf())){
+                            calendar.addEvent({
+                                title: 'afspraak kopen dier',
+                                start: date,
+                                allDay: true
+                            });
+                            alert('u heeft een afspraak gemaakt');
+                        } else {
+                            alert('Invalid date.');
+                        }
+                    }
                 }
+
             }
         });
 
@@ -84,38 +102,3 @@
 </script>
 </body>
 </html>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-var calendarEl = document.getElementById('calendar1');
-
-var calendar = new FullCalendar.Calendar(calendarEl, {
-plugins: [ 'dayGrid' ],
-defaultView: 'dayGridMonth',
-header: {
-center: 'addEventButton'
-},
-customButtons: {
-addEventButton: {
-text: 'add event...',
-click: function() {
-var dateStr = prompt('Enter a date in YYYY-MM-DD format');
-var date = new Date(dateStr + 'T00:00:00'); // will be in local time
-
-if (!isNaN(date.valueOf())) { // valid?
-calendar.addEvent({
-title: 'afspraak kopen dier',
-start: date,
-allDay: true
-});
-alert('u heeft een afspraak gemaakt');
-} else {
-alert('Invalid date.');
-}
-}
-}
-}
-});
-
-calendar.render();
-});
-</script>
