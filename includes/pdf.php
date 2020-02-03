@@ -10,8 +10,8 @@ session_start();
 $pdf=new FPDF();
 
 $userId = $_SESSION['userId'];
-
-$sql = "SELECT * FROM  `factuur` WHERE `userid` = '$userId'";
+$factuurId = $_SESSION['factuurcode'];
+$sql = "SELECT * FROM  `factuur` WHERE `factuurcode` = '$factuurId'";
 
     $result = mysqli_query($con, $sql); 
     $record = mysqli_fetch_assoc($result);

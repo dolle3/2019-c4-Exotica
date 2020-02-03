@@ -71,7 +71,7 @@ if( isset($_SESSION['userId'])){
           $sql = "UPDATE product SET productaantal = '$af' WHERE product.productid = '$productId'";
           mysqli_query($con,$sql);
 
-          
+          $_SESSION['factuurcode'] = $factuurcode;
     }
         
 }else{
@@ -133,12 +133,14 @@ if( isset($_SESSION['userId'])){
 
     }
 
+    $_SESSION['factuurcode'] = $factuurcode;
 
 
 }
 
+
 if(!isset($_SESSION['userId'])){
-     echo '<meta http-equiv="Refresh" content="1; url="index.php?content=NAW">';
+    echo '<meta http-equiv="Refresh" content="1; url=./index.php?content=NAW">';
 }else{
     
     echo '<meta http-equiv="Refresh" content="1; url=http://localhost/2019-c4-exotica/includes/pdf.php">';
