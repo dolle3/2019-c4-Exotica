@@ -74,6 +74,8 @@ if( isset($_SESSION['userId']))
     
           $sql = "UPDATE product SET productaantal = '$af' WHERE product.productid = '$productId'";
           mysqli_query($con,$sql);
+
+        //   echo '<meta http-equiv="Refresh" content="1; url="http://localhost/2019-c4-exotica/includes/pdf.php">';
     
     }
 }else{
@@ -149,5 +151,5 @@ $sql2 = "SELECT * FROM product WHERE productid = '$productId'";
 
 
 
-    // echo '<meta http-equiv="Refresh" content="0; url=index.php?content=NAW">';
+     echo '<meta http-equiv="Refresh" content="1; url=index.php?content=NAW">';
 }
