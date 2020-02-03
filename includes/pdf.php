@@ -9,10 +9,19 @@ require_once "../core/db/connectdb.php";
 session_start();
 $pdf=new FPDF();
 
+$userId = $_SESSION['userId'];
+
+$sql = "SELECT * FROM  `factuur` WHERE `userid` = '$userId'";
+
+    $result = mysqli_query($con, $sql); 
+    $record = mysqli_fetch_assoc($result);
+
+
+    $factuurdatum = $record['factuurdatum'];
+    $factuurcode = $record['factuurcode'];
        
 if(isset($_SESSION['userId'])){
 
-    $userId = $_SESSION['userId'];
     $sql = "SELECT * FROM  `user` WHERE `userid` = '$userId'";
 
     $result = mysqli_query($con, $sql); 
@@ -52,6 +61,8 @@ $pdf->AddPage();
 
 $pdf->SetFont("Arial","","12");
 $pdf->Image("../img/exo-logo.png");
+$pdf->Cell(0,5,"Datum: " . $factuurdatum,0,1,"R");
+$pdf->Cell(168.8,5,"Factuurcode: " . $factuurcode,0,1,"R");
 $pdf->Cell(0,5,"",0,1,"R");
 $pdf->Cell(0,5,"exotica.com",0,1,"L");
 $pdf->Cell(0,5,"Choorstraat 40",0,1,"L");
@@ -130,10 +141,13 @@ else
 
 
 }
-$pdf->cell(180,10,chr(128)  . $_SESSION['total_price'] ,1,1,"R");
+    $pdf->Cell(100,10,""  ,"LB");
+    $pdf->cell(30,10,"" ,"B");
+    $pdf->cell(20,10,  "" ,"B");    
+    $pdf->cell(30,10,chr(128)  . $_SESSION['total_price'] ,"BR");
 
 
- $pdf->Output();
+//  $pdf->Output();
 
 
 
@@ -164,8 +178,8 @@ $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"";
 
 
 $body = "--".$separator.$eol;
-$body .= "Content-Transfer-Encoding: 7bit".$eol.$eol;
-$body .= "Beste $firstname,
+ $body .= "Content-Transfer-Encoding: 7bit".$eol.$eol;
+$body .= "Beste $voornaam,
 
 Bedankt voor Het bestellen bij exotica.
 Uw bestelling wordt binnen 1 a 2 dagen verwerkt en kunt u aan het eind van de week in uw brievenbus verwachten.
@@ -175,12 +189,6 @@ Zorg dat u dit pdf bestand opslaat op uw pc.
 Met vriendelijke groet,
 
 exotica.com".$eol;
-
-
-$body .= "--".$separator.$eol;
-$body .= "Content-Type: text/html; charset=\"iso-8859-1\"".$eol;
-$body .= "Content-Transfer-Encoding: 8bit".$eol.$eol;
-$body .= $message.$eol;
 
 
 $body .= "--".$separator.$eol;
@@ -195,7 +203,7 @@ mail($to, $subject, $body, $headers);
 
 //  unset($_SESSION['shopping_cart']);
 
-// header("location:./index.php?content=home");
+ header("location:../index.php");
 
 
 ?>
