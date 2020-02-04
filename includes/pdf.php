@@ -152,10 +152,10 @@ else
 
 
 $to = $email; 
-$from = "admin@e-watch.nl"; 
+$from = "exotica@shop.nl"; 
 $subject = "OrderFormulier"; 
 $message = "<p> beste" . $voornaam . ",
-Bedankt voor Het bestellen bij e-watch.nl. In bijgevoegde bijlage kunt u uw order bekijken.
+Bedankt voor Het bestellen bij exotica@shop.nl In bijgevoegde bijlage kunt u uw order bekijken.
 Zorg dat u dit pdf bestand opslaat op uw pc</p>";
 
 
@@ -182,7 +182,7 @@ $body = "--".$separator.$eol;
 $body .= "Beste $voornaam,
 
 Bedankt voor Het bestellen bij exotica.
-Uw bestelling wordt binnen 1 a 2 dagen verwerkt en kunt u aan het eind van de week in uw brievenbus verwachten.
+Uw bestelling wordt binnen 1 a 2 dagen verwerkt en kunt u aan het eind van de week voor uw deur verwachten.
 In bijgevoegde bijlage kunt u uw order bekijken.
 Zorg dat u dit pdf bestand opslaat op uw pc.
 

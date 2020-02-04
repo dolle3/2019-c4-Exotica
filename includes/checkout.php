@@ -33,8 +33,7 @@ if( isset($_SESSION['userId'])){
     
     $result = mysqli_query($con, $sql );
     
-     echo $sql;
-
+    
     $factuurcode = mysqli_insert_id($con);
     
     foreach ($_SESSION["shopping_cart"] as $product)
@@ -59,7 +58,7 @@ if( isset($_SESSION['userId'])){
     
         $result = mysqli_query($con, $sql);
     
-        echo $sql;
+       
     
         $sql2 = "SELECT * FROM product WHERE productid = '$productId'";
     
@@ -94,7 +93,7 @@ if( isset($_SESSION['userId'])){
 
     $result = mysqli_query($con, $sql );
 
-    echo $sql;
+   
 
     $factuurcode = mysqli_insert_id($con);
 
@@ -119,7 +118,7 @@ if( isset($_SESSION['userId'])){
 
         $result = mysqli_query($con, $sql);
 
-        echo $sql;
+       
 
         $sql2 = "SELECT * FROM product WHERE productid = '$productId'";
 
