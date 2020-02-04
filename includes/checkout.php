@@ -137,10 +137,11 @@ if( isset($_SESSION['userId'])){
 
 }
 
-
+echo '<div class="alert alert-succes" role="alert">
+    bedankt voor het bestellen bij exotica.com</div>';
 if(!isset($_SESSION['userId'])){
     echo '<meta http-equiv="Refresh" content="1; url=./index.php?content=NAW">';
 }else{
     
-    echo '<meta http-equiv="Refresh" content="1; url=http://localhost/2019-c4-exotica/includes/pdf.php">';
+    echo '<meta http-equiv="Refresh" content="1; url=/includes/pdf.php">';
 }
