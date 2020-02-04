@@ -1,6 +1,6 @@
 
 
-<form class="modal-content animate" method="post" action="http://localhost/2019-c4-exotica/includes/pdf.php">
+<form class="modal-content animate" method="post" action="/includes/pdf.php">
 
     <input type="text" id="login_input_firsrname" placeholder="Naam" class="login_input" name="firstname" required/>
     <input type="text" id="login_input_infix" placeholder="tussenvoegsel" class="login_input" name="infix"/>
