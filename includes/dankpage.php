@@ -7,7 +7,7 @@
    
           
   <div class="imgcontainer">
-    <a href="../index.php"><span class="close" title="Close PopUp">&times;</span></a>
+    <a href="./index.php"><span class="close" title="Close PopUp">&times;</span></a>
     <img src="img/checked.png" alt="Avatar" class="avatar">
     <br>
     <h1>Bedankt, wij nemen zo spoedig contact met je op.</h1>

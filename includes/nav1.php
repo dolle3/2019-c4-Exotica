@@ -21,7 +21,7 @@
                     </li>
 
                       <li class="nav-item">
-                            <button type="button" onclick="window.location.href='index.php?content=agenda'"  id="footer1">AFSPRAAK MAKEN</button>
+                            <button type="button" onclick="window.location.href='includes/agenda1.php'"  id="footer1">AFSPRAAK MAKEN</button>
 
                       </li>
                       <li class="nav-item">
@@ -70,7 +70,7 @@
 
 
   
-  <form class="modal-content animate" method="post" action="index.php?content=log-out" name="loginform">
+
 
 <section id="shop">
 <div class="container text-center">

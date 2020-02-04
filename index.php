@@ -27,7 +27,7 @@ session_start();
   ?>
   
   <?php require_once 'core/init.php';
-    var_dump($_SESSION);
+//    var_dump($_SESSION);
   ?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

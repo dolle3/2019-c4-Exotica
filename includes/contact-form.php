@@ -13,8 +13,8 @@ if (isset($_POST['submit'])){
     $txt = "Nieuwe e-mail van". $name. ".\n\n".$message;
 
     mail($mailTo, $subject, $txt, $headers);
-    
-    header("Location: dankpage.php");
+
+    echo '<meta http-equiv="Refresh" content="0; url=./index.php?content=dankpage">';
 }
 
 ?>

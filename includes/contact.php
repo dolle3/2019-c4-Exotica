@@ -4,7 +4,7 @@
         <div class="container">
             <p>Laat een bericht achter en wij zullen zo spoedig mogelijk contact met je opnemen!</p><b>Vul alsjeblieft je gegevens in</b>
 
-            <form action="contact-form.php" method="post">
+            <form action="index.php?content=contact-form" method="post">
 
                 <input type="text" placeholder="Naam" class="name" name="name" required/>
                 <input type="text" placeholder="E-mailadres" class="email" name="mail" required/>
@@ -13,7 +13,7 @@
                 <textarea type="text" placeholder="Bericht" class="bericht" name="message" required></textarea>
 
                 <div class="test0">
-                    <button type="submit" name="submit" class="button2"class= "btn btn-primary">Versturen</button>
+                    <button type="submit" name="submit" class="button2 ">Versturen</button>
                 </div>
 
         </div>

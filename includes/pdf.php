@@ -22,7 +22,7 @@ $sql = "SELECT * FROM  `factuur` WHERE `factuurcode` = '$factuurId'";
        
 if(isset($_SESSION['userId'])){
 
-    $sql = "SELECT * FROM  `user` WHERE `userid` = '$userId'";
+    $sql = "SELECT * FROM  user WHERE userid = '$userId'";
 
     $result = mysqli_query($con, $sql); 
     $record = mysqli_fetch_assoc($result);
