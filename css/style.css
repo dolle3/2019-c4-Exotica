@@ -200,7 +200,7 @@ p{
     overflow: auto;
     background-color: rgb(255, 255, 255);
 }
-input[type=text],input[type=email], input[type=password],input[type=number] {
+input[type=text], input[type=password] {
     width: 90%;
     padding: 12px 20px;
     margin: 8px 26px;
@@ -261,7 +261,7 @@ textarea{
     padding-right: 20px;
     padding-left: 20px;
     font-size: 15px;
-    margin-left: 45%;
+    
     
 }
 
@@ -314,3 +314,10 @@ textarea{
 	color: #ffffff;
 	}
 
+#productcard {
+
+}
+
+.name{
+    size:100px;
+}

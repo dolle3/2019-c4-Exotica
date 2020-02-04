@@ -2,10 +2,10 @@
 ?>
 <section id="shop">
     <div class="container text-center">
-        <h1 class="title">Dieren</h1>
+        <h1 class="title">REPTIELEN</h1>
     </div>
 </section>
-<img src="img/myimage.png" class="bottom-img">
+<img src="./img/myimage.png" class="bottom-img">
 
 <section id="diensten">
 <!--    dit zijn de reptielen-->
@@ -68,7 +68,7 @@
         $cart_count = count(array_keys($_SESSION["shopping_cart"]));
 
         echo "<div class='cart_div type='hidden>";
-        echo "<a href='./index.php?content=cart'><img src='./img/cart.jpg' /> Cart<span>";
+        echo "<a href='../index.php?content=cart'><img src='./img/cart.jpg' /> Cart<span>";
         echo $cart_count; echo"</span></a>
 </div>";
 
@@ -84,11 +84,11 @@
   <div class=\"card\" style=\"width: auto;\">
   <form method='post' action=''>
   <input type='hidden' name='productcode' value=".$row['productcode']." />
-  <div class='image'><img src='".$row['image']."' height='140p'></div>
+  <div class='image'><img src='".$row['image']."' height='167p'></div>
   <div class=\"card-body\">
-    <div class='name'>".$row['productnaam']."</div>
-    <div class='price'>€".$row['prijs']."</div>
-    <button type='submit' class='buy'>Toevoegen aan winkelwagen</button>
+    <div class='name'><h5>".$row['productnaam']."</h5></div>
+    <h3><div class='price'>€".$row['prijs']."</div></h3>
+    <button type='submit' class='button2' class= 'btn btn-primary'>IN WINKELMAND</button>
     </div>
     </form>
   </div>
@@ -103,18 +103,28 @@
 
     echo "<div class='message_box' style='margin:10px 0px;'>";
     echo $status; ?>
+
+
 </section>
 
-<section id="diensten">
+<img src="./img/image.png" class="bottom-img">
+
+<section id="shop">
+    <div class="container text-center">
+        <h1 class="title">AMFIBIEËN</h1>
+    </div>
+</section>
+
+<section id="diensten2">
 <!--    dit zijn de amfibien-->
-    <?php
+<?php
     require_once "./core/db/connectdb.php";
     $status="";
     if (isset($_POST['productcode']) && $_POST['productcode']!=""){
         $productcode = $_POST['productcode'];
         $result = mysqli_query(
             $con,
-            "SELECT * FROM `product` WHERE `productcode`= '$productcode' AND `productcategorieid` = 2"
+            "SELECT * FROM `product` WHERE `productcode`= '$productcode' AND `productcategorieid` = 1"
         );
         $row = mysqli_fetch_assoc($result);
         $productid = $row['productid'];
@@ -166,7 +176,7 @@
         $cart_count = count(array_keys($_SESSION["shopping_cart"]));
 
         echo "<div class='cart_div type='hidden>";
-        echo "<a href='./index.php?content=cart'><img src='./img/cart.jpg' /> Cart<span>";
+        echo "<a href='../index.php?content=cart'><img src='./img/cart.jpg' /> Cart<span>";
         echo $cart_count; echo"</span></a>
 </div>";
 
@@ -182,11 +192,11 @@
   <div class=\"card\" style=\"width: auto;\">
   <form method='post' action=''>
   <input type='hidden' name='productcode' value=".$row['productcode']." />
-  <div class='image'><img src='".$row['image']."' height='140p'></div>
+  <div class='image'><img src='".$row['image']."' height='167p'></div>
   <div class=\"card-body\">
-    <div class='name'>".$row['productnaam']."</div>
-    <div class='price'>€".$row['prijs']."</div>
-    <button type='submit' class='buy'>Toevoegen aan winkelwagen</button>
+    <div class='name'><h5>".$row['productnaam']."</h5></div>
+    <h3><div class='price'>€".$row['prijs']."</div></h3>
+    <button type='submit' class='button2' class= 'btn btn-primary'>IN WINKELMAND</button>
     </div>
     </form>
   </div>
@@ -201,5 +211,6 @@
 
     echo "<div class='message_box' style='margin:10px 0px;'>";
     echo $status; ?>
+
+
 </section>
-<img src="img/image.png" class="bottom-img">
